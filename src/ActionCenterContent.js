@@ -8,10 +8,11 @@ import Card from "@material-ui/core/Card";
 import Icon from "@material-ui/core/Icon";
 import IconButton from "@material-ui/core/IconButton";
 
-const LightGreenCard = withStyles(theme => {
+const LightGreenCard = withStyles((theme) => {
   return {
     root: {
-      backgroundColor: theme.palette.secondary.light
+      backgroundColor: theme.palette.secondary.light,
+      marginBottom: theme.spacing(4)
     }
   };
 })(Card);
@@ -33,15 +34,17 @@ export default function ActionCenterContent() {
             interest from prospective employers.
           </Box>
           <IconButton aria-label="expand" onClick={handleExpandClick}>
-            <Icon color="primary">{
-              'keyboard_arrow_' + (expanded ? 'up' : 'down')
-            }</Icon>
+            <Icon color="primary">
+              {"keyboard_arrow_" + (expanded ? "up" : "down")}
+            </Icon>
           </IconButton>
         </Box>
         <Collapse in={expanded} timeout="auto" unmountOnExit>
           <CardContent>
             <div>Togglable content :)</div>
-            <Button variant="contained" color="primary">Check it out!</Button>
+            <Button variant="contained" color="primary">
+              Check it out!
+            </Button>
           </CardContent>
         </Collapse>
       </LightGreenCard>

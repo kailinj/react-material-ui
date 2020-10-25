@@ -14,7 +14,7 @@ import Expertises from "./Expertises";
 import { indigo } from "@material-ui/core/colors";
 
 const primaryLightColor = "#f3f7ff";
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex"
   },
@@ -61,9 +61,9 @@ const ourTheme = createMuiTheme({
     MuiButton: {
       disableElevation: true
     },
-    MuiInputLabel: {
-      shrink: true
-    },
+    // MuiInputLabel: {
+    //   shrink: true
+    // },
     MuiInput: {
       disableUnderline: true
     },
@@ -115,12 +115,12 @@ const ourTheme = createMuiTheme({
         }
       }
     },
-    MuiInputLabel: {
-      root: {
-        textTransform: "uppercase",
-        fontSize: ".85rem"
-      }
-    },
+    // MuiInputLabel: {
+    //   root: {
+    //     textTransform: "uppercase",
+    //     fontSize: ".85rem"
+    //   }
+    // },
     MuiTab: {
       root: {
         fontWeight: 500

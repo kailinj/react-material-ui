@@ -1,8 +1,6 @@
 /* eslint-disable no-use-before-define */
 import React from "react";
-import Chip from "@material-ui/core/Chip";
 import Autocomplete from "@material-ui/lab/Autocomplete";
-import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 
 export default function Expertises() {
@@ -12,15 +10,15 @@ export default function Expertises() {
         multiple
         id="tags-outlined"
         options={top100Films}
-        getOptionLabel={option => option.title}
+        getOptionLabel={(option) => option.title}
         defaultValue={[top100Films[13]]}
         filterSelectedOptions
-        renderInput={params => (
+        renderInput={(params) => (
           <TextField
             {...params}
             variant="outlined"
-            label="filterSelectedOptions"
-            placeholder="Favorites"
+            label="Favorite Movie(s)"
+            placeholder="Choose 1 or more"
           />
         )}
       />

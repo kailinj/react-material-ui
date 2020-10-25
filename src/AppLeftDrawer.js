@@ -1,32 +1,38 @@
-import React from 'react';
-import { Drawer, Toolbar, Box, Typography, Divider } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
+import React from "react";
+import {
+  Drawer,
+  Toolbar,
+  Box,
+  Typography,
+  Divider,
+  Avatar
+} from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
 
-import VerticalTabs from './VerticalTabs';
+import VerticalTabs from "./VerticalTabs";
 
 export default function AppLeftDrawer() {
   const drawerWidth = 240;
 
   const useStyles = makeStyles((theme) => ({
     root: {
-      display: 'flex',
+      display: "flex"
     },
     drawer: {
       width: drawerWidth,
-      flexShrink: 0,
+      flexShrink: 0
     },
     drawerPaper: {
-      width: drawerWidth,
+      width: drawerWidth
     },
     drawerContainer: {
-      overflow: 'auto',
+      overflow: "auto"
     },
     avatar: {
-      height: '120px',
-      width: '120px',
-      border: '1px solid blue',
-      borderRadius: '50%',
-    },
+      height: "120px",
+      width: "120px",
+      border: "1px solid blue"
+    }
   }));
 
   const classes = useStyles();
@@ -36,13 +42,13 @@ export default function AppLeftDrawer() {
       className={classes.drawer}
       variant="permanent"
       classes={{
-        paper: classes.drawerPaper,
+        paper: classes.drawerPaper
       }}
     >
       <Toolbar />
       <div className={classes.drawerContainer}>
         <Box m={3}>
-          <div className={classes.avatar}></div>
+          <Avatar className={classes.avatar} src="./avatar.svg"></Avatar>
           <Box my={2}>
             <Box mb={1}>
               <Typography variant="h4">Welcome, Kailin!</Typography>
